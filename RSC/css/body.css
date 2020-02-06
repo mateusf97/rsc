@@ -1,0 +1,39 @@
+:root {
+  --main-color-dark: #c7c6bb;
+  --main-color: #ffffff;
+  --secondary-color: #c7c6bb;
+  --background-color: linear-gradient( to left top,var(--main-color-dark) 0%,var(--main-color) 50%,var(--main-color-dark) 60%),  linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+}
+
+html, body {
+  height: 100%;
+}
+
+.header {
+  height: 120px;
+  background: var(--background-color);
+}
+
+.body {
+  min-height: calc(100% - 240px);
+}
+
+.footer {
+  height: 120px;
+  background: var(--background-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.text-right {
+  text-align: right;
+}
+
+
+.text-left {
+  text-align: left;
+}
+
