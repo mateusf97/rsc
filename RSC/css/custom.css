@@ -1,5 +1,6 @@
 .header-image {
   height: 75px;
+  margin-top: 20px;
 }
 
 .header-image img {
@@ -118,4 +119,30 @@ select {
   -webkit-user-select: all;
   -moz-user-select: all;
   display: inline-block;
+}
+
+.header-title {
+  color: #2a4798;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.key-search {
+  padding: 14px 14px;
+  width: 500px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 19px;
+  text-align: right;
+}
+
+.key-clean {
+  padding: 14px 14px;
+  width: 150px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 19px;
+  text-align: center;
+  font-family: cursive;
 }

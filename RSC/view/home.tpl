@@ -1,12 +1,8 @@
+<div class="row text-center top-space">
+  <div class="columns small-12 text-center header-title">RSC</div>
+  <div class="columns small-12 text-center top-space">
+    <input class="key-search" type="text" placeholder="Digite o número da chave. Ex: '117'" name="">
+    <input class="key-clean" id="key-clean" type="button" value="&#9003; Limpar" name="">
+  </div>
 
-	<div class="row text-center top-space">
-		<div class="columns medium-4 small-12 top-space">
-      <a href="?page=cadastro_inicial" class="google-submit full-size">Cadastro Inicial</a>
-		</div>
-		<div class="columns medium-4 small-12 top-space">
-			<a href="?page=ficha_dados" class="google-submit full-size">Ficha Dados Cliente</a>
-		</div>
-    <div class="columns medium-4 small-12 top-space">
-			<a href="?page=cadastro" class="google-submit full-size">Contrato Cliente</a>
-    </div>
-	</div>
+</div>

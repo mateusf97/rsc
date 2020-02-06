@@ -14,16 +14,12 @@
   <div class="header">
     <div class="row text-center">
       <div class="columns medium-6 small-12 header-image">
-        <a href="?page=home"><img src="images/logo.png"></a>
+        <a href="?page=home"><img src="images/logo.svg"></a>
       </div>
       <div class="columns small-12 medium-6 header-search">
-        <form action="">
-        <input type="text" name="page">
-
-        <button type="submit" class="no-format">
-          <img width="35" src="images/search.png">
-        </button>
-        </form>
+        <div class="header-title">
+          (RSC) REGISTRO E STATUS DA CHAVE
+        </div>
       </div>
     </div>
   </div>
