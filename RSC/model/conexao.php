@@ -4,7 +4,7 @@
 	$user = "root";
 	$senha = "123123";
 
-	$db = "vitrini";
+	$db = "vitriniKeys";
 
 	$conexao = new mysqli($ip, $user, $senha, $db);
 
