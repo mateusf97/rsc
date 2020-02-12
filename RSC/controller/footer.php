@@ -1,3 +1,4 @@
 <?php
-	require 'view/footer.tpl';
+	require 'view/status.tpl';
+  require 'view/footer.tpl';
 ?>

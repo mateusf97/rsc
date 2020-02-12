@@ -19,4 +19,11 @@ function getFilterKeys($key) {
 	return $results;
 }
 
+function giveBack($key) {
+	require '../model/conexao.php';
+
+	$SQL = "UPDATE key_list SET status = 'EM ARMÁRIO', username = NULL WHERE id = '" . $key . "'";
+	$rs = mysqli_query($conexao, $SQL) or die("Algum erro aconteceu na atualização das chaves");
+}
+
 ?>

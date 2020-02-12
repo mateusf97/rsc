@@ -17,15 +17,14 @@
 
   <div class="columns small-12 top-space" id="key-filter-insertion">
     <?php if(isset($keys) && count($keys)) foreach ($keys as $id => $key): ?>
-      <div class="row key-rows-table keys-<?php echo $key['id']; ?>">
+      <div class="row key-rows-table">
         <div class="columns small-1 action-field top-space"><?php echo $key['id']; ?></div>
         <div class="columns small-3 action-field top-space"><?php echo $key['last_update']; ?></div>
         <div class="columns small-2 action-field top-space"><?php echo $key['status']; ?></div>
         <div class="columns small-4 action-field top-space cut-text'"><?php echo $key['username'];?>&nbsp;</div>
-        <div class="columns small-1 action-button top-space"><img src="../images/change.svg"></div>
-        <div class="columns small-1 action-button top-space end"><img src="../images/history.svg"></div>
+        <div class="columns small-1 action-button button-update top-space" data-status="<?php echo $key['status']; ?>" data-username="<?php echo $key['username'];?>" data-id="<?php echo $key['id']; ?>"><img src="../images/change.svg"></div>
+        <div class="columns small-1 action-button button-history top-space end" data-status="" data-username="<?php echo $key['username'];?>" data-id="<?php echo $key['id']; ?>"><img src="../images/history.svg"></div>
       </div>
     <?php endforeach ?>
   </div>
-
 </div>
