@@ -1,9 +1,9 @@
 <?php
 
-function getKeys() {
-	require 'model/conexao.php';
+function getFilterKeys($key) {
+	require '../model/conexao.php';
 
-	$SQL = "SELECT * FROM key_list";
+	$SQL = "SELECT * FROM key_list WHERE id LIKE '" . $key . "%'";
 	$rs = mysqli_query($conexao, $SQL) or die("Algum erro aconteceu na pesquisa das chaves");
 
 

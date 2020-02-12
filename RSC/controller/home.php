@@ -1,13 +1,9 @@
 <?php
 
-	// require_once 'model/home.php';
+	require_once 'model/home.php';
 
-	// $results = getNow();
+	$keys = getKeys();
 
-	// foreach ($results as $key => $result) {
-	// 	$hora_certa = $result['hora'];
-	// 	echo ($hora_certa);
-	// }
 
 	require_once 'view/home.tpl';
 

@@ -130,19 +130,70 @@ select {
 
 .key-search {
   padding: 14px 14px;
-  width: 500px;
-  border: 1px solid gray;
-  border-radius: 5px;
-  font-size: 19px;
-  text-align: right;
+  width: 100px;
+  border: 1px solid #c3c3c3;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: left;
+
 }
 
 .key-clean {
-  padding: 14px 14px;
-  width: 150px;
-  border: 1px solid gray;
-  border-radius: 5px;
+  color: #2a4798;
+  padding: 4px 4px;
+  border-radius: 2px;
   font-size: 19px;
   text-align: center;
-  font-family: cursive;
+}
+
+.key-title-table {
+  color: #000;
+  font-size: 20px;
+  text-align: center;
+}
+
+.key-title-table .columns {
+  border: 5px solid #ced0ce;
+  border-radius: 15px;
+  background: #fcd800;
+  padding: 10px;
+}
+
+
+
+.key-rows-table .columns {
+  border: 2px solid #ced0ce;
+  border-bottom: 2px solid white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.action-button:hover {
+  background: #bec0be;
+}
+
+.action-button:active {
+  background: #aeb0ae;
+  border: 2px solid #bec0be;
+}
+
+.action-button {
+  cursor: pointer;
+  user-select: none;
+  padding: 4px;
+}
+
+.action-button img {
+  width: 25px;
+}
+
+.action-field {
+  font-size: 16px;
+  padding: 5px;
+}
+
+.cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
