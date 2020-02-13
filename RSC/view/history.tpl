@@ -6,7 +6,7 @@
       <div class="row key-status-table text-center">
         <div class="columns small-4 top-space center">Status</div>
         <div class="columns small-4 top-space end">Funcionário</div>
-        <div class="columns small-4 top-space end">Data e Horas</div>
+        <div class="columns small-4 top-space end">Data e Hora</div>
       </div>
 
       <div class="row text-center top-space ">
