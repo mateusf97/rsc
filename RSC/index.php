@@ -1,4 +1,5 @@
 <?php
+	define("TIMEZONE_FIX", 3600); // Correção do horário de verão
 
 	require_once 'controller/header.php';
 

@@ -13,7 +13,7 @@ function getFilterKeys($key) {
 	}
 
 	foreach ($results as $key => $result) {
-		$results[$key]['last_update'] = date('d/m/Y H:i:s', strtotime($result['last_update']));
+		$results[$key]['last_update'] = date('d/m/Y H:i:s', strtotime($result['last_update']) - TIMEZONE_FIX);
 	}
 
 	return $results;
@@ -52,7 +52,7 @@ function history($key) {
 	}
 
 	foreach ($results as $key => $result) {
-		$results[$key]['last_update'] = date('d/m/Y H:i:s', strtotime($result['last_update']));
+		$results[$key]['last_update'] = date('d/m/Y H:i:s', strtotime($result['last_update']) - TIMEZONE_FIX);
 	}
 
 	return $results;
