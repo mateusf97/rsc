@@ -9,7 +9,8 @@ USE vitriniKeys;
 
 CREATE TABLE IF NOT EXISTS `key_history` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `status` varchar(128) DEFAULT "VAGO",
+  `number` int(11) NOT NULL,
+  `status` varchar(128),
   `username` varchar(128) DEFAULT NULL,
   `last_update` TIMESTAMP ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
@@ -17,6 +18,7 @@ CREATE TABLE IF NOT EXISTS `key_history` (
 
 CREATE INDEX key_list_username ON `key_history`(username);
 CREATE INDEX key_list_status ON `key_history`(status);
+CREATE INDEX key_list_key ON `key_history`(number);
 
 -- @autor Mateus Felipe - mateus_f97@hotmail.com
 -- This table was created to save the key and key status for a user

@@ -13,12 +13,15 @@
       </div>
       <div class="row key-data-table text-center top-space">
       </div>
-      <div class="row key-data-table text-center top-space">
-        <div class="columns small-push-3 small-3 top-space center">
-          <button class="action-status-button">Atualizar</button>
+      <div class="row key-data-table text-center top-space flex-centered">
+        <div class="top-space act-button">
+          <button class="action-status-button give-new-status">Pegar chave</button>
         </div>
-        <div class="columns small-push-3 small-3 top-space end">
+        <div class="top-space act-button">
           <button class="action-status-button give-back-key" data-id="">Devolver</button>
+        </div>
+        <div class="top-space act-button">
+          <button class="action-status-button give-null-key" data-id="">Vago</button>
         </div>
       </div>
     </div>
