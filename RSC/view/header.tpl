@@ -14,7 +14,7 @@
   <div class="header">
     <div class="row text-center">
       <div class="columns medium-6 small-12 header-image">
-        <a href="?page=home"><img src="images/logo.svg"></a>
+        <a href="/"><img src="images/logo.svg"></a>
       </div>
       <div class="columns small-12 medium-6 header-search">
         <div class="header-title">

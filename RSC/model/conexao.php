@@ -2,7 +2,7 @@
 
 	$ip = "localhost:3306";
 	$user = "root";
-	$senha = "123123";
+	$senha = "";
 
 	$db = "vitriniKeys";
 

@@ -179,7 +179,6 @@ $( document ).ready(function() {
             $('.display-background-status').hide();
             $('.key-search').val(chave);
             $('.key-search').keyup();
-            console.log(response)
           }
         }, error: function(response) {
           alert("Algo deu errado. E não era pra isso ter acontecido.\n\n Já verificou se o sistema está em execução?");
@@ -194,7 +193,6 @@ $( document ).ready(function() {
     $('.give-null-key').on('click',function() {
 
       var chave = $('#id-key').val();
-      console.log(chave);
 
       $.ajax({
         url: 'controller/give_null.php',
@@ -208,7 +206,6 @@ $( document ).ready(function() {
             $('.display-background-status').hide();
             $('.key-search').val(chave);
             $('.key-search').keyup();
-            console.log(response)
           }
         }, error: function(response) {
           alert("Algo deu errado. E não era pra isso ter acontecido.\n\n Já verificou se o sistema está em execução?");
@@ -239,7 +236,6 @@ $( document ).ready(function() {
             $('.display-background-update').hide();
             $('.key-search').val(chave);
             $('.key-search').keyup();
-            console.log(response)
           }
         }, error: function(response) {
           alert("Algo deu errado. E não era pra isso ter acontecido.\n\n Já verificou se o sistema está em execução?");
