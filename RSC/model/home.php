@@ -13,7 +13,7 @@ function getKeys() {
 	}
 
 	foreach ($results as $key => $result) {
-		$results[$key]['last_update'] = date('d/m/Y H:i:s', strtotime($result['last_update']) - TIMEZONE_FIX);
+		$results[$key]['last_update'] = date('d/m/Y H:i:s', strtotime($result['last_update']));
 	}
 
 	return $results;

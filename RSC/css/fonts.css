@@ -34,19 +34,3 @@
 }
 
 
-@font-face {
-  font-family: Montserrat;
-  src: url('./fonts/Montserrat-LightItalic.ttf');
-  font-style: italic;
-  font-weight: 500;
-}
-
-
-@font-face {
-  font-family: Montserrat;
-  src: url('./fonts/Montserrat-Thin.ttf');
-  font-style: normal
-  font-weight: 300;
-}
-
-
