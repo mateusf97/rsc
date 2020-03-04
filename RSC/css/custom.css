@@ -207,12 +207,6 @@ select {
   padding: 5px;
 }
 
-.cut-text {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
 .display-key-status {
   position: fixed;
   top: calc(100%/2 - 190px);
@@ -328,4 +322,26 @@ select {
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #c3c3c3;
+}
+
+.floating-tip {
+  background-image: url("./../images/warn.png");
+  background-repeat: no-repeat;
+  right: 0;
+  position: absolute;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  cursor: help;
+}
+
+.floating-tip:hover {
+  mix-blend-mode: darken;
+}
+
+.cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
 }

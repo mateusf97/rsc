@@ -4,8 +4,9 @@
 
     <div class="columns small-12 top-space">
       <div class="row key-status-table text-center">
-        <div class="columns small-push-3 small-3 top-space center">Status</div>
-        <div class="columns small-push-3 small-3 top-space end">Funcionário</div>
+        <div class="columns small-4 top-space center">Status</div>
+        <div class="columns small-4 top-space end">Funcionário</div>
+        <div class="columns small-4 top-space end">Observação</div>
       </div>
 
 
@@ -13,14 +14,19 @@
       </div>
 
       <div class="row text-center">
-        <div class="columns small-push-3 small-3 top-space center">
+        <div class="columns small-4 top-space center">
           <select class="select-status">
             <option class="select-status">ALOCADO</option>
           </select>
         </div>
-        <div class="columns small-push-3 small-3 top-space end">
+        <div class="columns small-4 top-space end">
           <select class="select-status select-username">
             <?php echo $usernames; ?>
+          </select>
+        </div>
+        <div class="columns small-4 top-space end">
+          <select class="select-status select-observation">
+            <?php echo $status; ?>
           </select>
         </div>
       </div>

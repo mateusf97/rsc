@@ -10,7 +10,7 @@ $( document ).ready(function() {
       type: 'POST',
       success: function(response) {
         if (response.error) {
-          console.log(response);
+          console.warn(response);
         } else {
           $('.button-update').unbind().off();
           $('#key-filter-insertion').empty();
@@ -31,6 +31,11 @@ $( document ).ready(function() {
             }
 
             var col4 = $('<div>').addClass("columns small-4 action-field top-space cut-text").html(name);
+
+            if (element.observation !== null) {
+              col4.append($('<div>').addClass("floating-tip").attr("title", element.observation));
+            }
+
             var col5 = $('<div>').addClass("columns small-1 action-button button-update top-space").attr('data-status', element.status).attr('data-username', name).attr('data-id', element.id).html($('<img>').attr('src', '../images/change.svg'));
             var col6 = $('<div>').addClass("columns small-1 action-button button-history top-space end").attr('data-status', element.status).attr('data-username', name).attr('data-id', element.id).html($('<img>').attr('src', '../images/history.svg'));
 
@@ -47,7 +52,7 @@ $( document ).ready(function() {
           clicks();
         }
       }, error: function(response) {
-        alert("Algo deu errado. E não era pra isso ter acontecido.\n\n Já verificou se o sistema está em execução?");
+        alert("Algo deu errado. E não era pra isso ter acontecido.\n\n Já verificou se o sistema está em execução? \n\n Dica: Verifique se há internet ou reinicie o computador.");
       }
     });
   });
@@ -90,7 +95,7 @@ $( document ).ready(function() {
         type: 'POST',
         success: function(response) {
           if (response.error) {
-            console.log(response);
+            console.warn(response);
           } else {
             $('#history-content').empty();
 
@@ -174,14 +179,14 @@ $( document ).ready(function() {
         type: 'POST',
         success: function(response) {
           if (response.error) {
-            console.log(response);
+            console.warn(response);
           } else {
             $('.display-background-status').hide();
             $('.key-search').val(chave);
             $('.key-search').keyup();
           }
         }, error: function(response) {
-          alert("Algo deu errado. E não era pra isso ter acontecido.\n\n Já verificou se o sistema está em execução?");
+          alert("Algo deu errado. E não era pra isso ter acontecido.\n\n Já verificou se o sistema está em execução? \n\n Dica: Verifique se há internet ou reinicie o computador.");
         }
       });
     });
@@ -201,14 +206,14 @@ $( document ).ready(function() {
         type: 'POST',
         success: function(response) {
           if (response.error) {
-            console.log(response);
+            console.warn(response);
           } else {
             $('.display-background-status').hide();
             $('.key-search').val(chave);
             $('.key-search').keyup();
           }
         }, error: function(response) {
-          alert("Algo deu errado. E não era pra isso ter acontecido.\n\n Já verificou se o sistema está em execução?");
+          alert("Algo deu errado. E não era pra isso ter acontecido.\n\n Já verificou se o sistema está em execução? \n\n Dica: Verifique se há internet ou reinicie o computador.");
         }
       });
     });
@@ -218,6 +223,7 @@ $( document ).ready(function() {
   $('.update-key-status').on('click',function(){
     var chave = $('#id-key').val();
     var username = $.trim($(".select-username option:selected").html());
+    var observation = $.trim($(".select-observation option:selected").html());
 
     if (username == "" || username == null || !username) {
       alert("!!!AVISO!!!\n\n\n É orbigatório selecionar quem está alocando a chave!")
@@ -226,19 +232,20 @@ $( document ).ready(function() {
       $.ajax({
         url: 'controller/update.php',
         dataType: 'json',
-        data:{'key':chave, 'username':username},
+        data:{'key':chave, 'username':username, 'observation':observation},
         type: 'POST',
         success: function(response) {
           if (response.error) {
-            console.log(response);
+            console.warn(response);
           } else {
             $('.display-background-status').hide();
             $('.display-background-update').hide();
             $('.key-search').val(chave);
             $('.key-search').keyup();
+            $(".select-observation").val("");
           }
         }, error: function(response) {
-          alert("Algo deu errado. E não era pra isso ter acontecido.\n\n Já verificou se o sistema está em execução?");
+          alert("Algo deu errado. E não era pra isso ter acontecido.\n\n Já verificou se o sistema está em execução? \n\n Dica: Verifique se há internet ou reinicie o computador.");
         }
       });
     }

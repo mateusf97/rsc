@@ -6,6 +6,7 @@
   }
 
   $usernames = requireToVar('view/usuarios.tpl');
+  $status = requireToVar('view/observacao.tpl');
 
 	require 'view/status.tpl';
   require 'view/history.tpl';

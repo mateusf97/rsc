@@ -9,8 +9,9 @@
 
   $key = $_POST['key'];
   $username = $_POST['username'];
+  $observation = $_POST['observation'];
 
-  $history = update($key, $username);
+  $history = update($key, $username, $observation);
 
   print_r(json_encode(array($history)));
 ?>

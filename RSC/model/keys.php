@@ -58,11 +58,18 @@ function history($key) {
 	return $results;
 }
 
-function update($key, $username) {
+function update($key, $username, $observation) {
 	require '../model/conexao.php';
 
-	$SQL = "UPDATE key_list SET status = 'ALOCADO', username = '" . $username . "' WHERE id = '" . $key . "'";
-	mysqli_query($conexao, $SQL) or die ("Algum erro aconteceu na atualização da chave para o status VAGO");
+	if ($observation === "" || !$observation || $observation == "" || $observation ==  " ") {
+		$observation = "NULL";
+	} else {
+		$observation = "'" . $observation . "'";
+	}
+
+	$SQL = "UPDATE key_list SET status = 'ALOCADO', username = '" . $username . "', observation = " . $observation . " WHERE id = '" . $key . "'";
+
+	mysqli_query($conexao, $SQL) or die ("Algum erro aconteceu na atualização da chave para o status ALOCADO");
 
 	$SQL = "INSERT INTO key_history SET status = 'ALOCADO', username = '" . $username . "', `number` = '" . $key . "'";
 	mysqli_query($conexao, $SQL) or die ("Algum erro aconteceu na adição do histórico da chaves quando o status mudou para ALOCADO");

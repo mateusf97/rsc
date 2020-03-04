@@ -21,7 +21,11 @@
         <div class="columns small-1 action-field top-space"><?php echo $key['id']; ?></div>
         <div class="columns small-3 action-field top-space"><?php echo $key['last_update']; ?></div>
         <div class="columns small-2 action-field top-space"><?php echo $key['status']; ?></div>
-        <div class="columns small-4 action-field top-space cut-text'"><?php echo $key['username'];?>&nbsp;</div>
+        <div class="columns small-4 action-field top-space cut-text"><?php echo $key['username'];?>&nbsp;
+          <?php if ($key['observation']) { ?>
+            <div class="floating-tip" title="<?php echo $key['observation']; ?>"></div>
+          <?php } ?>
+        </div>
         <div class="columns small-1 action-button button-update top-space" data-status="<?php echo $key['status']; ?>" data-username="<?php echo $key['username'];?>" data-id="<?php echo $key['id']; ?>"><img src="../images/change.svg"></div>
         <div class="columns small-1 action-button button-history top-space end" data-status="" data-username="<?php echo $key['username'];?>" data-id="<?php echo $key['id']; ?>"><img src="../images/history.svg"></div>
       </div>
